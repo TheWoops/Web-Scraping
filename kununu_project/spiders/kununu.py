@@ -1,7 +1,7 @@
 import scrapy
 
 
-class QuotesSpider(scrapy.Spider):
+class KununuSpider(scrapy.Spider):
     name = "quotes"
     allowed_domains = ["kununu.com"]
     start_urls = ['https://www.kununu.com/de/ec4u-expert-consulting/kommentare']
@@ -24,7 +24,7 @@ class QuotesSpider(scrapy.Spider):
            next_page_url = response.urljoin(next_page_url)
            yield scrapy.Request(url=next_page_url, callback = self.parse)
         else:
-            self.log('')
-            self.log('Last page reached:' + response.url)
+            self.log('');self.log('');self.log('');self.log('');
+            self.log('Last page reached: ' + response.url)
             self.log('Last page contained {} item(s)'.format(len(review_list)))
-            self.log('')
+            self.log('');self.log('');self.log('');self.log('');self.log('');
