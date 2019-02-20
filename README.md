@@ -36,11 +36,12 @@ like data mining, information processing or historical archival."*
                     items.py
                     ...
 
-3. Open your python CLI (I used anaconda prompt):
-       3.1 Navigate into the spider folder within scrapy folder → (scrapy/kununu/kununu_project/spiders)
+3. Open your python CLI (I used anaconda prompt):<br />
+       3.1 Navigate into the spider folder within scrapy folder → (scrapy/kununu/kununu_project/spiders)<br />
        3.2 Execute the following command: scrapy runspider kununu.py
        
-4. By default it scrapes reviews from ec4u expert consulting ag. You can change this by adapting the links within the "kununu.py" - Spider.
+4. By default it scrapes reviews from ec4u expert consulting ag.<br />
+   You can change this by adapting the links within the "kununu.py" - Spider.
 
 
 
