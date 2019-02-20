@@ -6,7 +6,6 @@ import json
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 
 
-
 class FirstPipeline(object):
 
     def process_item(self, item, spider):
