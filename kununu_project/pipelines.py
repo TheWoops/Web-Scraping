@@ -11,8 +11,8 @@ class FirstPipeline(object):
     def process_item(self, item, spider):
         item['rating'] = item['rating'].strip()
         item['rating'] = float(item['rating'].replace(',', "."))
-        print("pipeline: {} ".format(item['rating']))
 
+        # Replace date information to enable simple
         item['date'] = item['date'].replace('Jan. ', "01.")
         item['date'] = item['date'].replace('Feb. ', "02.")
         item['date'] = item['date'].replace('März', "03.")
@@ -26,5 +26,9 @@ class FirstPipeline(object):
         item['date'] = item['date'].replace('Nov. ', "11.")
         item['date'] = item['date'].replace('Dez. ', "12.")
         item['date'] = item['date'].replace(' ', "")
-        
+
+        # Extract Company Name from URL and define unique company ids
+        item['company'] = item['url'].split("/de/")[1].split("/")[0]
+        item['company_id'] = 1 if item['company']  == 'ec4u-expert-consulting' else 2
+
         return item
